@@ -138,3 +138,45 @@ main > .book-card {
     border: none;
     background-color: var(--chartreuse);
 }
+
+#pop-up {
+    width: 300px;
+    border: 1px solid white;
+    padding: 32px 64px 32px 64px;
+  }
+  
+  #pop-up > form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  
+  #pop-up > form > div {
+    flex: 1 1 100%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  #pop-up > form > div > h2 {
+    margin: 0;
+  }
+  
+  #pop-up > form > label {
+    flex: 1 1 100%;
+  }
+  
+  #pop-up > form > input {
+    flex: 1 1 100%;
+  }
+  
+  #pop-up > form > select {
+    flex: 1 1 100%;
+  }
+  
+  #pop-up > form > #submit-button {
+    flex: 1 1 60%;
+  }
+  
+  #pop-up > form > #clear-button {
+    flex: 1 1 30%;
+  }

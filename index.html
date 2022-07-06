@@ -35,5 +35,28 @@
         <div class="book-card"></div>
         <button id="add-book-button">+ Add Book</button>
     </main>
+    <div id="pop-up">
+        <form action="">
+             <div>
+              <h2>Add New Book</h2>
+             </div>
+            <label for="book-title">Book title</label>
+            <input type="text" name="book-title" id="input-book-title" required>
+            <label for="book-author">Book author</label>
+            <input type="text" name="book-author" id="input-book-author" required>
+            <label for="page-number">Number of pages</label>
+            <input type="number" name="page-number" id="input-page-number" required>
+            <label for="language">Language</label>
+            <input type="text" name="language" id="input-language" required>
+            <label for="read-or-not">Book status</label>
+            <select name="read-or-not" id="read-or-not" required>
+              <option value="" selected disabled hidden>Did you read the book?</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+            <button id="submit-button">Add</button>
+            <button id="clear-button">Clear</button>
+          </form>
+    </div>
 </body>
 </html>
