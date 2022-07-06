@@ -13,6 +13,9 @@
     --blue-gray-100: #D9D2EC;
     --blue-gray-50: #F0F4F8;
     --chartreuse: #b9efa4;
+    --turquoise: #17e0cd;
+    --camel: #efc9a4;
+    --pink: #f59cba;
 }
 
 * {
@@ -25,39 +28,113 @@ html, body {
     width: 100vw;
     background-color: var(--dark-gray);
     overflow: auto;
+    margin: 0;
 }
 
-break {
-    flex-basis: 100%;
-    width: 0px;
-    height: 0px;
-    overflow: hidden;
+body {
+    padding: 30px 100px 30px 100px;
 }
 
 header {
-    display: flex;
-    gap: 32px;
-    flex-wrap: wrap;
+    display: grid;
+    height: 200px;
+    grid-template-columns: 5.5fr 4.5fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "title library-log"
+    "status-bar status-bar";
+    gap: 16px;
+    align-items: center;
 }
 
-header > div {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    flex: 1 1 100%;
+header > #title-container {
+    display: grid;
 }
 
-
-header > div > .title {
+header > #title-container > .title {
     margin: 0;
-    font-size: 36px;
-    color: var(--blue-gray-50);
+    justify-self: end;
+    color: var(--blue-gray-200);
+    font-size: 48px;
 }
 
-header > div > button {
-    padding: 8px 32px 8px 32px;
-    font-size: 24px;
+header > #library-log-container {
+    background-color: var(--blue-gray-800);
     border-radius: 8px;
-    border: 5px solid var(--blue-gray-600);
+    padding: 16px 16px 16px 16px;
+    justify-self: center;
+    width: 200px;
+    display: grid;
+    grid-template-columns: 9.5fr 0.5fr;
+    grid-template-areas: 
+    "title title";
+}
+
+header > #library-log-container > div {
+    grid-area: title;
+}
+
+header > #library-log-container > div > h2 {
+    margin: 0;
+    color: var(--blue-gray-200);
+}
+
+header > #library-log-container > p {
+    margin: 0;
+    color: var(--blue-gray-200);
+}
+
+header > #status-bar {
+    padding: 8px 16px 8px 16px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 8px;
+    background-color: var(--blue-gray-800);
+    grid-area: status-bar;
+}
+
+header > #status-bar > #read-color {
+    background: linear-gradient(135deg, rgba(24, 77, 104, 0.8) 0%, rgba(87, 202, 133, 0.8) 100%);
+    width: 50px;
+    height: 30px;
+}
+
+header > #status-bar > #not-read-color {
+    background: linear-gradient(135deg, #e3e3e3 0%, #5d6874 100%);
+    width: 50px;
+    height: 30px;
+}
+
+header > #status-bar > h3 {
+    margin: 0;
+    color: var(--blue-gray-200);
+}
+
+main {
+    padding: 16px 0px 0px 0px;
+    display: grid;
+    gap: 16px;
+    align-items: center;
+    grid-template-columns: repeat(auto-fit, 350px);
+    grid-template-rows: 250px 250px;
+}
+
+main > .book-card {
+    width: 350px;
+    height: 220px;
+    background: linear-gradient(135deg, rgba(24, 77, 104, 0.8) 0%, rgba(87, 202, 133, 0.8) 100%);
+    border-radius: 8px;
+}
+
+#add-book-button {
+    position: fixed;
+    bottom: 20px;
+    right: 120px;
+    height: 50px;
+    font-size: 24px;
+    padding: 8px 24px 8px 24px;
+    border-radius: 8px;
+    border: none;
     background-color: var(--chartreuse);
 }
