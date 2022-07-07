@@ -2,16 +2,16 @@
 
 :root {
     --dark-gray: #1d2025;
-    --blue-gray-900: #102A43;
-    --blue-gray-800: #243B53;
-    --blue-gray-700: #334E68;
-    --blue-gray-600: #486581;
-    --blue-gray-500: #627D98;
-    --blue-gray-400: #829AB1;
-    --blue-gray-300: #9FB3C8;
-    --blue-gray-200: #BCCCDC;
-    --blue-gray-100: #D9D2EC;
-    --blue-gray-50: #F0F4F8;
+    --blue-gray-900: #0f172a;
+    --blue-gray-800: #1e293b;
+    --blue-gray-700: #334155;
+    --blue-gray-600: #475569;
+    --blue-gray-500: #64748b;
+    --blue-gray-400: #94a3b8;
+    --blue-gray-300: #cbd5e1;
+    --blue-gray-200: #e2e8f0;
+    --blue-gray-100: #f1f5f9;
+    --blue-gray-50: #f8fafc;
     --chartreuse: #b9efa4;
     --turquoise: #17e0cd;
     --camel: #efc9a4;
@@ -140,12 +140,22 @@ main > .book-card {
 }
 
 #pop-up {
-    width: 300px;
-    border: 1px solid white;
-    padding: 32px 64px 32px 64px;
+    background: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   
   #pop-up > form {
+    border-radius: 8px;
+    width: 300px;
+    border: 1px solid white;
+    padding: 32px 64px 32px 64px;
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
@@ -159,24 +169,48 @@ main > .book-card {
   
   #pop-up > form > div > h2 {
     margin: 0;
+    color: var(--blue-gray-200);
   }
   
   #pop-up > form > label {
     flex: 1 1 100%;
+    color: var(--blue-gray-200);
   }
   
   #pop-up > form > input {
     flex: 1 1 100%;
+    color: var(--blue-gray-200);
+    border-radius: 4px;
   }
-  
-  #pop-up > form > select {
+
+  #pop-up > form > input[type="text"], input[type="number"] {
+    background-color: var(--dark-gray);
+  }  
+
+  #pop-up > form > select option {
     flex: 1 1 100%;
+    background-color: var(--blue-gray-200);
   }
   
+  #pop-up > form > button {
+    background-color: var(--dark-gray);
+    color: var(--blue-gray-200);
+  }
+
   #pop-up > form > #submit-button {
     flex: 1 1 60%;
   }
   
   #pop-up > form > #clear-button {
     flex: 1 1 30%;
+  }
+
+  .close {
+    position: fixed;
+    top:  270px;
+    right: 810px;
+    height: 36px;
+    width: 36px;
+    border-radius: 50%;
+    filter: invert();
   }
