@@ -16,9 +16,14 @@
     --turquoise: #17e0cd;
     --camel: #efc9a4;
     --pink: #f59cba;
+    --select-border: #777;
+    --select-focus: blue;
+    --select-arrow: var(--select-border);
 }
 
-* {
+*,
+*::before,
+*::after {
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;;
 }
@@ -137,6 +142,7 @@ main > .book-card {
     border-radius: 8px;
     border: none;
     background-color: var(--chartreuse);
+    cursor: pointer;
 }
 
 #pop-up {
@@ -146,19 +152,21 @@ main > .book-card {
     position: absolute;
     top: 0;
     left: 0;
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
   }
   
   #pop-up > form {
+    background-color: var(--dark-gray);
     border-radius: 8px;
-    width: 300px;
+    width: 480px;
+    height: 520px;
     border: 1px solid white;
     padding: 32px 64px 32px 64px;
     display: flex;
     flex-wrap: wrap;
-    gap: 8px;
+    gap: 16px;
   }
   
   #pop-up > form > div {
@@ -181,20 +189,36 @@ main > .book-card {
     flex: 1 1 100%;
     color: var(--blue-gray-200);
     border-radius: 4px;
+    border: solid 1px --blue-gray-200;
   }
 
   #pop-up > form > input[type="text"], input[type="number"] {
     background-color: var(--dark-gray);
   }  
 
-  #pop-up > form > select option {
+
+  #pop-up > form > #read-or-not {
     flex: 1 1 100%;
-    background-color: var(--blue-gray-200);
+    appearance: none;
+    background-color: transparent;
+    border: none;
+    padding: 0 1rem 0 0;
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: inherit;
+    line-height: inherit;
+    outline: none;
+    color: var(--blue-gray-200);
+    border: 1px solid var(--blue-gray-200);
+    border-radius: 4px;
   }
-  
+
   #pop-up > form > button {
     background-color: var(--dark-gray);
     color: var(--blue-gray-200);
+    border-radius: 6px;
+    cursor: pointer;
   }
 
   #pop-up > form > #submit-button {
@@ -213,4 +237,5 @@ main > .book-card {
     width: 36px;
     border-radius: 50%;
     filter: invert();
+    cursor: pointer;
   }
