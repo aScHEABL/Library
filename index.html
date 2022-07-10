@@ -33,14 +33,24 @@
     </header>
     <main>
         <div class="book-card">
-            <h3 id="book-title">War and peace</h3>
-            <p></p>
+            <img src="./resources/close-circle-outline.png" id="remove-book-1">
+            <h3 class="card-book-title">War and peace</h3>
+            <p class="card-book-author">Author: Leo Tolstoy</p>
+            <p class="card-book-page">Pages: 1225</p>
+            <p class="card-book-language">Language: English</p>
+            <div class="toggle-container">
+                <p>Mark as read</p>
+                <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                </label>
+            </div>
         </div>
         <button id="add-book-button">+ Add Book</button>
     </main>
     <div id="pop-up">
         <form>
-            <img src="./resources/close-circle-outline.png" class="close">
+            <img src="./resources/close-circle-outline.png" id="popup-close">
              <div>
               <h2>Add New Book</h2>
              </div>

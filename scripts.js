@@ -3,7 +3,7 @@ console.log(`Hello World!`);
 let myLibary = [];
 inputArray = [`#input-book-title`, `#input-book-author`, `#input-page-number`, `#input-language`, `#read-or-not`];
 const addBookButton_DOM = document.querySelector(`#add-book-button`);
-const closePopUpButton_DOM = document.querySelector(`.close`);
+const closePopupButton_DOM = document.querySelector(`#popup-close`);
 const sumbitButton_DOM = document.querySelector(`#submit-button`);
 const clearButton_DOM = document.querySelector(`#clear-button`);
 const input_DOM = inputArray.map((dom_id) => document.querySelector(dom_id));
@@ -16,7 +16,7 @@ addBookButton_DOM.addEventListener(`click`, () => {
     document.querySelector(`#pop-up`).style.display = `flex`;
 });
 
-closePopUpButton_DOM.addEventListener(`click`, () => {
+closePopupButton_DOM.addEventListener(`click`, () => {
     console.log(`Popup has been closed!`)
     document.querySelector(`#pop-up`).style.display = `none`;
 })
@@ -49,6 +49,6 @@ let addBookToLibary = () => {
     myLibary.push(new book(title, author, page, language, readOrNot));
     console.log(myLibary);
     myLibary.forEach((book_card) => {
-        
+
     });
 };
