@@ -32,16 +32,19 @@
         </div>
     </header>
     <main>
-        <div class="book-card">
+        <div class="book-card" id="book-1">
             <img src="./resources/close-circle-outline.png" id="remove-book-1">
-            <h3 class="card-book-title">War and peace</h3>
-            <p class="card-book-author">Author: Leo Tolstoy</p>
-            <p class="card-book-page">Pages: 1225</p>
-            <p class="card-book-language">Language: English</p>
+            <h3 class="book-card-title" id="book-1-title">War and peace</h3>
+            <p class="book-card-label">Author:</p>
+            <p class="book-card-author book-card-value" id="book-1-author">Leo Tolstoy</p>
+            <p class="book-card-label">Pages: </p>
+            <p class="book-card-page book-card-value" id="book-1-page">1225</p>
+            <p class="book-card-label">Language: </p>
+            <p class="book-card-language book-card-value" id="book-1-language">English</p>
             <div class="toggle-container">
                 <p>Mark as read</p>
                 <label class="switch">
-                    <input type="checkbox">
+                    <input type="checkbox" id="book-1-readornot">
                     <span class="slider round"></span>
                 </label>
             </div>
@@ -59,11 +62,11 @@
             <label for="label-book-author">Book author</label>
             <input type="text" name="label-book-author" id="input-book-author" required>
             <label for="label-page-number">Number of pages</label>
-            <input type="number" name="label-page-number" id="input-page-number" required>
+            <input type="number" name="label-page-number" id="input-book-page" required>
             <label for="label-language">Language</label>
-            <input type="text" name="label-language" id="input-language" required>
+            <input type="text" name="label-language" id="input-book-language" required>
             <label for="label-read-or-not">Book status</label>
-            <select name="label-read-or-not" id="read-or-not" required>
+            <select name="label-read-or-not" id="select-read-or-not" required>
                 <option value="" selected disabled hidden>Did you read it?</option>
                 <option value="true">Yes</option>
                 <option value="false">No</option>

@@ -203,7 +203,7 @@ main > .book-card {
   }  
 
 
-  #pop-up > form > #read-or-not {
+  #pop-up > form > #select-read-or-not {
     position: relative;
     bottom: 12%;
     flex: 1 1 100%;
@@ -220,6 +220,13 @@ main > .book-card {
     color: var(--blue-gray-200);
     border: 1px solid var(--blue-gray-200);
     border-radius: 4px;
+  }
+
+  #pop-up > form > #select-read-or-not > option {
+    color: var(--blue-gray-200);
+    background-color: var(--dark-gray);
+    border: none;
+    outline: none;
   }
 
   #pop-up > form > button {
@@ -277,18 +284,26 @@ main > .book-card {
     position: relative;
     bottom: 28%;
   }
+
   main > .book-card > p {
     margin: 0;
-    flex: 1 1 100%;
     color: white;
     position: relative;
     bottom: 20%;
   }
 
+  main > .book-card > .book-card-label {
+    flex: 1 1 5%
+  }
+
+  main > .book-card > .book-card-value {
+    flex: 1 1 70%;
+  }
+
   main > .book-card > .toggle-container {
     position: relative;
     left: 58%;
-    top: 0%;
+    bottom: 5%;
     display: flex;
     justify-content: flex-end;
     gap: 8px;
