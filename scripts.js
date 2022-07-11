@@ -1,6 +1,6 @@
 console.log(`Hello World!`);
 
-let myLibary = [];
+let myLibrary = [];
 inputArray = [`#input-book-title`, `#input-book-author`, `#input-page-number`, `#input-language`, `#read-or-not`];
 const addBookButton_DOM = document.querySelector(`#add-book-button`);
 const closePopupButton_DOM = document.querySelector(`#popup-close`);
@@ -31,7 +31,7 @@ clearButton_DOM.addEventListener(`click`, () => {
     clearAllField();
 })
 
-function book (title, author, page, language, readOrNot) {
+function bookConstructor (title, author, page, language, readOrNot) {
     this.title = title;
     this.author = author;
     this.page = page;
@@ -42,13 +42,16 @@ function book (title, author, page, language, readOrNot) {
 let addBookToLibary = () => {
     const title = document.getElementById(`input-book-title`).value;
     const author = document.getElementById(`input-book-author`).value;
-    const page = document.getElementById(`input-page-number`).value;
-    const language = document.getElementById(`input-language`).value;
-    const readOrNot = document.getElementById(`read-or-not`).value;
-    // myLibary.push(bookName) = new book(title, author, page, language, readOrNot);
-    myLibary.push(new book(title, author, page, language, readOrNot));
-    console.log(myLibary);
-    myLibary.forEach((book_card) => {
+    const page = document.getElementById(`input-book-page`).value;
+    const language = document.getElementById(`input-book-language`).value;
+    const readOrNot = document.getElementById(`select-read-or-not`).value;
+    myLibrary.push(new bookConstructor(title, author, page, language, readOrNot));
+    console.log(myLibrary);
+};
+
+let displayBookOnPage = () => {
+    const bookCard = document.getElementsByClassName(`book-card`);
+    myLibrary.forEach((card) => {
 
     });
 };
