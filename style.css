@@ -170,6 +170,8 @@ main > .book-card {
   }
   
   #pop-up > form > div {
+    position: relative;
+    bottom: 12%;
     flex: 1 1 100%;
     display: flex;
     justify-content: center;
@@ -181,11 +183,15 @@ main > .book-card {
   }
   
   #pop-up > form > label {
+    position: relative;
+    bottom: 12%;
     flex: 1 1 100%;
     color: var(--blue-gray-200);
   }
   
   #pop-up > form > input {
+    position: relative;
+    bottom: 12%;
     flex: 1 1 100%;
     color: var(--blue-gray-200);
     border-radius: 4px;
@@ -198,6 +204,8 @@ main > .book-card {
 
 
   #pop-up > form > #read-or-not {
+    position: relative;
+    bottom: 12%;
     flex: 1 1 100%;
     appearance: none;
     background-color: transparent;
@@ -215,6 +223,8 @@ main > .book-card {
   }
 
   #pop-up > form > button {
+    position: relative;
+    bottom: 12%;
     background-color: var(--dark-gray);
     color: var(--blue-gray-200);
     border-radius: 6px;
@@ -230,9 +240,9 @@ main > .book-card {
   }
 
   #popup-close {
-    position: absolute;
-    top:  170px;
-    right: 525px;
+    position: relative;
+    top: -7%;
+    left: 107%;
     height: 36px;
     width: 36px;
     border-radius: 50%;
