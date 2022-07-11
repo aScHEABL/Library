@@ -255,6 +255,8 @@ main > .book-card {
     padding: 32px 32px 32px 32px;
     display: flex;
     flex-wrap: wrap;
+    gap: 8px;
+    align-items: flex-start;
   }
 
   main > .book-card > h3 {
@@ -262,17 +264,21 @@ main > .book-card {
     flex: 1 1 100%;
     color: white;
     font-size: 24px;
+    position: relative;
+    bottom: 28%;
   }
   main > .book-card > p {
     margin: 0;
     flex: 1 1 100%;
     color: white;
+    position: relative;
+    bottom: 20%;
   }
 
   main > .book-card > .toggle-container {
     position: relative;
-    right: -160px;
-    bottom: -25px;
+    left: 58%;
+    top: 0%;
     display: flex;
     justify-content: flex-end;
     gap: 8px;
