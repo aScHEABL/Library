@@ -257,7 +257,7 @@ main > .book-card {
     cursor: pointer;
   }
 
-  #remove-book-1 {
+  .remove-book-button {
     border-radius: 50%;
     filter: invert();
     cursor: pointer;
@@ -309,7 +309,7 @@ main > .book-card {
     gap: 8px;
   }
 
-  main > .book-card > .toggle-container > p {
+  main > .book-card > .toggle-container > .toggle-p {
     color: white;
     margin: 0;
   }
@@ -322,7 +322,7 @@ main > .book-card {
     height: 20px;
   }
   /* Hide default HTML checkbox */
-  .switch input {
+  .switch .input-book-read-or-not {
     opacity: 0;
     width: 0;
     height: 0;
