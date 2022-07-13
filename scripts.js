@@ -54,35 +54,56 @@ let displayBooksOnPage = () => {
     myLibrary.forEach((card) => {
 
         const bookCard_DOM = document.createElement(`div`);
-        bookCard_DOM.classList.add(`.book-card`);
+        bookCard_DOM.classList.add(`book-card`);
         const closeButton_DOM = document.createElement(`img`);
         closeButton_DOM.classList.add(`remove-book-button`);
+        closeButton_DOM.src = `./resources/close-circle-outline.png`;
         const bookCardTitle_DOM = document.createElement(`h3`);
         bookCardTitle_DOM.classList.add(`book-card-title`);
-        const bookCardLabel_DOM = document.createElement(`p`);
-        bookCardLabel_DOM.classList.add(`book-card-label`);
+        const bookCardAuthorLabel_DOM = document.createElement(`p`);
+        bookCardAuthorLabel_DOM.classList.add(`book-card-label`);
+        bookCardAuthorLabel_DOM.textContent = `Author: `;
         const bookCardAuthor_DOM = document.createElement(`p`);
-        bookCardAuthor_DOM.classList.add(`book-card-author`);
-        bookCardAuthor_DOM.classList.add(`book-card-value`);
+        bookCardAuthor_DOM.classList.add(`book-card-author`, `book-card-value`);
+        const bookCardPageLabel_DOM = document.createElement(`p`);
+        bookCardPageLabel_DOM.classList.add(`book-card-label`);
+        bookCardPageLabel_DOM.textContent = `Pages: `;
         const bookCardPage_DOM = document.createElement(`p`);
-        bookCardPage_DOM.classList.add(`book-card-page`);
-        bookCardPage_DOM.classList.add(`book-card-value`);
+        bookCardPage_DOM.classList.add(`book-card-page`, `book-card-value`);
+        const bookCardLanguageLabel_DOM = document.createElement(`p`);
+        bookCardLanguageLabel_DOM.classList.add(`book-card-label`);
+        bookCardLanguageLabel_DOM.textContent = `Language: `;
         const bookCardLanguage_DOM = document.createElement(`p`);
-        bookCardLanguage_DOM.classList.add(`book-card-language`);
-        bookCardLanguage_DOM.classList.add(`book-card-value`);
-        const toogleContainer_DOM = document.createElement(`div`);
-        toogleContainer_DOM.classList.add(`toggle-container`);
+        bookCardLanguage_DOM.classList.add(`book-card-language`, `book-card-value`);
+        const toggleContainer_DOM = document.createElement(`div`);
+        toggleContainer_DOM.classList.add(`toggle-container`);
         const toggleP_DOM = document.createElement(`p`);
-        toggleP_DOM.classList.add(`toggle-label`);
+        toggleP_DOM.classList.add(`toggle-p`);
+        toggleP_DOM.textContent = `Mark as read`;
         const switchLabel_DOM = document.createElement(`label`);
         switchLabel_DOM.classList.add(`switch`);
+
         const checkBox_DOM = document.createElement(`input`);
         checkBox_DOM.classList.add(`input-book-read-or-not`);
         const span_DOM = document.createElement(`span`);
-        span_DOM.classList.add(`slider`);
-        span_DOM.classList.add(`round`);
+        // span_DOM.classList.add(`slider`, `slider:before`, `input:checked + .slider`, `input:focus + slider`, 
+        // `input:checked + slider:before`, `round`, `round:before`);
 
+        span_DOM.classList.add(`slider`);
+        span_DOM.insertRule(`slider:before {
+            position: absolute;
+            content: "";
+            height: 16px;
+            width: 16px;
+            left: 3px;
+            bottom: 2px;
+            background-color: white;
+            -webkit-transition: .4s;
+            transition: .4s;}`, 0);
         main_DOM.append(bookCard_DOM);
-        bookCard_DOM.append(closeButton_DOM, bookCardTitle_DOM, )
+        bookCard_DOM.append(closeButton_DOM, bookCardTitle_DOM, bookCardAuthorLabel_DOM, bookCardAuthor_DOM, 
+            bookCardPageLabel_DOM, bookCardPage_DOM, bookCardLanguageLabel_DOM, bookCardLanguage_DOM, toggleContainer_DOM);
+        toggleContainer_DOM.append(toggleP_DOM, switchLabel_DOM);
+        switchLabel_DOM.append(checkBox_DOM, span_DOM);
     });
 };
