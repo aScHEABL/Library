@@ -43,14 +43,14 @@ let addBookToLibary = () => {
     const language = document.getElementById(`input-book-language`).value;
     const readOrNot = document.getElementById(`select-read-or-not`).value;
     myLibrary.push(new bookConstructor(title, author, page, language, readOrNot));
-    console.log(myLibrary);
+    console.log(myLibrary[0].title);
     displayBooksOnPage();
 };
 
 let displayBooksOnPage = () => {
     const main_DOM = document.getElementById(`main`);
     myLibrary.forEach((card) => {
-
+        let bookIndex = myLibrary.length - 1;
         const bookCard_DOM = document.createElement(`div`);
         bookCard_DOM.classList.add(`book-card`);
         const closeButton_DOM = document.createElement(`img`);
@@ -58,21 +58,25 @@ let displayBooksOnPage = () => {
         closeButton_DOM.src = `./resources/close-circle-outline.png`;
         const bookCardTitle_DOM = document.createElement(`h3`);
         bookCardTitle_DOM.classList.add(`book-card-title`);
+        bookCardTitle_DOM.textContent = myLibrary[bookIndex].title;
         const bookCardAuthorLabel_DOM = document.createElement(`p`);
         bookCardAuthorLabel_DOM.classList.add(`book-card-label`);
         bookCardAuthorLabel_DOM.textContent = `Author: `;
         const bookCardAuthor_DOM = document.createElement(`p`);
         bookCardAuthor_DOM.classList.add(`book-card-author`, `book-card-value`);
+        bookCardAuthor_DOM.textContent = myLibrary[bookIndex].author;
         const bookCardPageLabel_DOM = document.createElement(`p`);
         bookCardPageLabel_DOM.classList.add(`book-card-label`);
         bookCardPageLabel_DOM.textContent = `Pages: `;
         const bookCardPage_DOM = document.createElement(`p`);
         bookCardPage_DOM.classList.add(`book-card-page`, `book-card-value`);
+        bookCardPage_DOM.textContent = myLibrary[bookIndex].page;
         const bookCardLanguageLabel_DOM = document.createElement(`p`);
         bookCardLanguageLabel_DOM.classList.add(`book-card-label`);
         bookCardLanguageLabel_DOM.textContent = `Language: `;
         const bookCardLanguage_DOM = document.createElement(`p`);
         bookCardLanguage_DOM.classList.add(`book-card-language`, `book-card-value`);
+        bookCardLanguage_DOM.textContent = myLibrary[bookIndex].language;
 
         const toggleContainer_DOM = document.createElement(`div`);
         toggleContainer_DOM.classList.add(`toggle-container`);
