@@ -86,6 +86,7 @@ let displayBooksOnPage = () => {
         const switchLabel_DOM = document.createElement(`label`);
         const checkBox_DOM = document.createElement(`input`);
         checkBox_DOM.type = `checkbox`;
+        
         const span_DOM = document.createElement(`span`);
         
         main_DOM.append(bookCard_DOM);
