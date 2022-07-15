@@ -8,8 +8,6 @@ const sumbitButton_DOM = document.querySelector(`#submit-button`);
 const clearButton_DOM = document.querySelector(`#clear-button`);
 const input_DOM = inputArray.map((dom_id) => document.querySelector(dom_id));
 
-
-
 addBookButton_DOM.addEventListener(`click`, () => {
     console.log(`Popup has been opened!`)
     document.querySelector(`#pop-up`).style.display = `flex`;
@@ -75,31 +73,17 @@ let displayBooksOnPage = () => {
         bookCardLanguageLabel_DOM.textContent = `Language: `;
         const bookCardLanguage_DOM = document.createElement(`p`);
         bookCardLanguage_DOM.classList.add(`book-card-language`, `book-card-value`);
+
         const toggleContainer_DOM = document.createElement(`div`);
         toggleContainer_DOM.classList.add(`toggle-container`);
         const toggleP_DOM = document.createElement(`p`);
         toggleP_DOM.classList.add(`toggle-p`);
         toggleP_DOM.textContent = `Mark as read`;
         const switchLabel_DOM = document.createElement(`label`);
-        switchLabel_DOM.classList.add(`switch`);
-
         const checkBox_DOM = document.createElement(`input`);
-        checkBox_DOM.classList.add(`input-book-read-or-not`);
+        checkBox_DOM.type = `checkbox`;
         const span_DOM = document.createElement(`span`);
-        // span_DOM.classList.add(`slider`, `slider:before`, `input:checked + .slider`, `input:focus + slider`, 
-        // `input:checked + slider:before`, `round`, `round:before`);
-
-        span_DOM.classList.add(`slider`);
-        span_DOM.insertRule(`slider:before {
-            position: absolute;
-            content: "";
-            height: 16px;
-            width: 16px;
-            left: 3px;
-            bottom: 2px;
-            background-color: white;
-            -webkit-transition: .4s;
-            transition: .4s;}`, 0);
+        
         main_DOM.append(bookCard_DOM);
         bookCard_DOM.append(closeButton_DOM, bookCardTitle_DOM, bookCardAuthorLabel_DOM, bookCardAuthor_DOM, 
             bookCardPageLabel_DOM, bookCardPage_DOM, bookCardLanguageLabel_DOM, bookCardLanguage_DOM, toggleContainer_DOM);
@@ -107,3 +91,4 @@ let displayBooksOnPage = () => {
         switchLabel_DOM.append(checkBox_DOM, span_DOM);
     });
 };
+
