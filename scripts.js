@@ -41,9 +41,9 @@ let addBookToLibary = () => {
     const author = document.getElementById(`input-book-author`).value;
     const page = document.getElementById(`input-book-page`).value;
     const language = document.getElementById(`input-book-language`).value;
-    const readOrNot = document.getElementById(`select-read-or-not`).value;
+    // convert string to boolean
+    const readOrNot = (document.getElementById(`select-read-or-not`).value === 'true');
     myLibrary.push(new bookConstructor(title, author, page, language, readOrNot));
-    console.log(myLibrary[0].title);
     displayBooksOnPage();
 };
 
@@ -77,7 +77,7 @@ let displayBooksOnPage = () => {
         const bookCardLanguage_DOM = document.createElement(`p`);
         bookCardLanguage_DOM.classList.add(`book-card-language`, `book-card-value`);
         bookCardLanguage_DOM.textContent = myLibrary[bookIndex].language;
-
+        // checkbox
         const toggleContainer_DOM = document.createElement(`div`);
         toggleContainer_DOM.classList.add(`toggle-container`);
         const toggleP_DOM = document.createElement(`p`);
@@ -86,9 +86,19 @@ let displayBooksOnPage = () => {
         const switchLabel_DOM = document.createElement(`label`);
         const checkBox_DOM = document.createElement(`input`);
         checkBox_DOM.type = `checkbox`;
-        
+        checkBox_DOM.checked = myLibrary[bookIndex].readOrNot;
+        console.log(typeof myLibrary[bookIndex].readOrNot);
+        checkBox_DOM.addEventListener(`change`, () => {
+            if (this.checked) {
+                myLibrary[bookIndex].readOrNot = true;
+                console.log(`book ${bookIndex} is read!`);
+            } else {
+                myLibrary[bookIndex].readOrNot = false;
+                console.log(`book ${bookIndex} is not read!`);
+            }
+        });
+
         const span_DOM = document.createElement(`span`);
-        
         main_DOM.append(bookCard_DOM);
         bookCard_DOM.append(closeButton_DOM, bookCardTitle_DOM, bookCardAuthorLabel_DOM, bookCardAuthor_DOM, 
             bookCardPageLabel_DOM, bookCardPage_DOM, bookCardLanguageLabel_DOM, bookCardLanguage_DOM, toggleContainer_DOM);
