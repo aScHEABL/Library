@@ -89,13 +89,13 @@ let displayBooksOnPage = () => {
         checkBox_DOM.checked = myLibrary[bookIndex].readOrNot;
         console.log(typeof myLibrary[bookIndex].readOrNot);
         checkBox_DOM.addEventListener(`change`, () => {
-            if (this.checked) {
+            if (checkBox_DOM.checked === true) {
                 myLibrary[bookIndex].readOrNot = true;
                 console.log(`book ${bookIndex} is read!`);
-            } else {
+            } else if (checkBox_DOM.checked === false) {
                 myLibrary[bookIndex].readOrNot = false;
                 console.log(`book ${bookIndex} is not read!`);
-            }
+            };
         });
 
         const span_DOM = document.createElement(`span`);
