@@ -45,6 +45,7 @@ let addBookToLibary = () => {
     const readOrNot = (document.getElementById(`select-read-or-not`).value === 'true');
     myLibrary.push(new bookConstructor(title, author, page, language, readOrNot));
     displayBooksOnPage();
+    document.querySelector(`#pop-up`).style.display = `none`;
 };
 
 let displayBooksOnPage = () => {
@@ -56,6 +57,8 @@ let displayBooksOnPage = () => {
         const closeButton_DOM = document.createElement(`img`);
         closeButton_DOM.classList.add(`remove-book-button`);
         closeButton_DOM.src = `./resources/close-circle-outline.png`;
+        
+
         const bookCardTitle_DOM = document.createElement(`h3`);
         bookCardTitle_DOM.classList.add(`book-card-title`);
         bookCardTitle_DOM.textContent = myLibrary[bookIndex].title;
