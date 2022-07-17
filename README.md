@@ -1,5 +1,7 @@
 # Libary <br>
 
+![Screenshot of the live demo](/resources/Screen%20Shot%202022-07-17%20at%2012.40.39%20PM.png)
+
 This is the Library project from [The Odin Project](https://www.theodinproject.com/lessons/node-path-javascript-library) <br>
 
 [Live Demo](https://ascheabl.github.io/Libary/)👈 <br>
