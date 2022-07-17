@@ -19,8 +19,9 @@ closePopupButton_DOM.addEventListener(`click`, () => {
 })
 
 sumbitButton_DOM.addEventListener(`click`, () => {
-    console.log(`Book has been submitted!`);
     addBookToLibary();
+    let bookIndex = myLibrary.length - 1;
+    console.log(`Book ${bookIndex} has been submitted!`);
 });
 
 clearButton_DOM.addEventListener(`click`, () => {
@@ -54,11 +55,9 @@ let displayBooksOnPage = () => {
         let bookIndex = myLibrary.length - 1;
         const bookCard_DOM = document.createElement(`div`);
         bookCard_DOM.classList.add(`book-card`);
-        const closeButton_DOM = document.createElement(`img`);
-        closeButton_DOM.classList.add(`remove-book-button`);
-        closeButton_DOM.src = `./resources/close-circle-outline.png`;
-        
-
+        const removeButton_DOM = document.createElement(`img`);
+        removeButton_DOM.classList.add(`remove-book-button`);
+        removeButton_DOM.src = `./resources/close-circle-outline.png`;
         const bookCardTitle_DOM = document.createElement(`h3`);
         bookCardTitle_DOM.classList.add(`book-card-title`);
         bookCardTitle_DOM.textContent = myLibrary[bookIndex].title;
@@ -103,10 +102,16 @@ let displayBooksOnPage = () => {
 
         const span_DOM = document.createElement(`span`);
         main_DOM.append(bookCard_DOM);
-        bookCard_DOM.append(closeButton_DOM, bookCardTitle_DOM, bookCardAuthorLabel_DOM, bookCardAuthor_DOM, 
+        bookCard_DOM.append(removeButton_DOM, bookCardTitle_DOM, bookCardAuthorLabel_DOM, bookCardAuthor_DOM, 
             bookCardPageLabel_DOM, bookCardPage_DOM, bookCardLanguageLabel_DOM, bookCardLanguage_DOM, toggleContainer_DOM);
         toggleContainer_DOM.append(toggleP_DOM, switchLabel_DOM);
         switchLabel_DOM.append(checkBox_DOM, span_DOM);
+
+        removeButton_DOM.addEventListener(`click`, () => {
+            myLibrary.splice(bookIndex);
+            console.log(`book ${bookIndex} has been removed from the array`);
+            main_DOM.removeChild(bookCard_DOM);
+        });
+        
     });
 };
-
