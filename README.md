@@ -15,7 +15,7 @@ This is the Library project from [The Odin Project](https://www.theodinproject.c
 - CSS Grid <br>
 - Vanilla Javascript <br>
 
-Tools <br>
+### Tools <br>
 - Visual Studio Code <br>
 - Linux <br>
 - Git and Github <br>
