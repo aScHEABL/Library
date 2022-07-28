@@ -4,7 +4,7 @@ This is the Library project from [The Odin Project](https://www.theodinproject.c
 
 [Live Demo](https://ascheabl.github.io/Libary/)👈 <br>
 
-![Screenshot of the live demo](./resources/Screen%20Shot%202022-07-27%20at%203.49.48%20AM.png)
+![Screenshot of the live demo](./resources/Screen%20Shot%202022-07-27%20at%203.56.11%20AM.png)
 
 ### Built with <br>
 
