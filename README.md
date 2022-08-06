@@ -2,7 +2,7 @@
 
 This is the Library project from [The Odin Project](https://www.theodinproject.com/lessons/node-path-javascript-library) <br>
 
-[Live Demo](https://ascheabl.github.io/Libary/)👈 <br>
+[Live Demo](https://ascheabl.github.io/Library/)👈 <br>
 
 ![Screenshot of the live demo](./resources/Screen%20Shot%202022-07-27%20at%203.56.11%20AM.png)
 
