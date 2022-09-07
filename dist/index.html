@@ -5,8 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Libary</title>
-    <link rel="stylesheet" href="./style.css" crossorigin>
-    <script src="./scripts.js" defer></script>
+    <script src="../dist/main.js" type="module"></script>
 </head>
 <body>
     <header>
@@ -32,7 +31,7 @@
         </div>
     </header>
     <main id="main">
-        <div class="book-card" id="book-1">
+        <!-- <div class="book-card" id="book-1">
             <img src="./resources/close-circle-outline.png" class="remove-book-button">
             <h3 class="book-card-title" id="book-1-title">War and peace</h3>
             <p class="book-card-label">Author:</p>
@@ -48,31 +47,31 @@
                     <span class="slider round"></span>
                 </label>
             </div>
-        </div>
-        <button id="add-book-button">+ Add Book</button>
+        </div> -->
+        <button id="add-book-button" data-add-book-button>+ Add Book</button>
     </main>
-    <div id="pop-up">
+    <div id="pop-up" data-popup-window>
         <form>
-            <img src="./resources/close-circle-outline.png" id="popup-close">
+            <img id="popup-close" data-popup-close>
              <div>
               <h2>Add New Book</h2>
              </div>
             <label for="label-book-title">Book title</label>
-            <input type="text" name="label-book-title" id="input-book-title" required>
+            <input type="text" name="label-book-title" id="input-book-title" data-input-book-title required>
             <label for="label-book-author">Book author</label>
-            <input type="text" name="label-book-author" id="input-book-author" required>
+            <input type="text" name="label-book-author" id="input-book-author" data-input-book-author required>
             <label for="label-page-number">Number of pages</label>
-            <input type="number" name="label-page-number" id="input-book-page" required>
+            <input type="number" name="label-page-number" id="input-book-page" data-input-book-page required>
             <label for="label-language">Language</label>
-            <input type="text" name="label-language" id="input-book-language" required>
+            <input type="text" name="label-language" id="input-book-language" data-input-book-language required>
             <label for="label-read-or-not">Book status</label>
-            <select name="label-read-or-not" id="select-read-or-not" required>
+            <select name="label-read-or-not" id="select-read-or-not" data-select-read-or-not required>
                 <option value="" selected disabled hidden>Did you read it?</option>
                 <option value="true">Yes</option>
                 <option value="false">No</option>
             </select>
-            <button type="button" id="submit-button">Add</button>
-            <button type="reset" id="clear-button">Clear</button>
+            <button type="button" id="submit-button" data-submit-button>Add</button>
+            <button type="reset" id="clear-button" data-reset-button>Reset</button>
           </form>
     </div>
 </body>
