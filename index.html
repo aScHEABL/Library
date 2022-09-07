@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Libary</title>
+    <script src="../dist/main.js" type="module"></script>
+</head>
+<body>
+    <header>
+        <div id="title-container">
+            <h1 class="title">Library</h1>
+        </div>
+        <div id="library-log-container">
+            <div>
+                <h2>Library Log</h2>
+            </div>
+            <p class="library-log-title">Total books count:</p>
+            <p class="library-log-count">0</p>
+            <p class="library-log-title">Read:</p>
+            <p class="library-log-count">0</p>
+            <p class="library-log-title">Not read</p>
+            <p class="library-log-count">0</p>
+        </div>
+        <div id="status-bar">
+            <div id="read-color"></div>
+            <h3>Read</h3>
+            <div id="not-read-color"></div>
+            <h3>Not read</h3>
+        </div>
+    </header>
+    <main id="main">
+        <!-- <div class="book-card" id="book-1">
+            <img src="./resources/close-circle-outline.png" class="remove-book-button">
+            <h3 class="book-card-title" id="book-1-title">War and peace</h3>
+            <p class="book-card-label">Author:</p>
+            <p class="book-card-author book-card-value" id="book-1-author">Leo Tolstoy</p>
+            <p class="book-card-label">Pages: </p>
+            <p class="book-card-page book-card-value" id="book-1-page">1225</p>
+            <p class="book-card-label">Language: </p>
+            <p class="book-card-language book-card-value" id="book-1-language">English</p>
+            <div class="toggle-container">
+                <p class="toggle-p">Mark as read</p>
+                <label class="switch">
+                    <input type="checkbox" class="input-book-read-or-not">
+                    <span class="slider round"></span>
+                </label>
+            </div>
+        </div> -->
+        <button id="add-book-button" data-add-book-button>+ Add Book</button>
+    </main>
+    <div id="pop-up" data-popup-window>
+        <form>
+            <img id="popup-close" data-popup-close>
+             <div>
+              <h2>Add New Book</h2>
+             </div>
+            <label for="label-book-title">Book title</label>
+            <input type="text" name="label-book-title" id="input-book-title" data-input-book-title required>
+            <label for="label-book-author">Book author</label>
+            <input type="text" name="label-book-author" id="input-book-author" data-input-book-author required>
+            <label for="label-page-number">Number of pages</label>
+            <input type="number" name="label-page-number" id="input-book-page" data-input-book-page required>
+            <label for="label-language">Language</label>
+            <input type="text" name="label-language" id="input-book-language" data-input-book-language required>
+            <label for="label-read-or-not">Book status</label>
+            <select name="label-read-or-not" id="select-read-or-not" data-select-read-or-not required>
+                <option value="" selected disabled hidden>Did you read it?</option>
+                <option value="true">Yes</option>
+                <option value="false">No</option>
+            </select>
+            <button type="button" id="submit-button" data-submit-button>Add</button>
+            <button type="reset" id="clear-button" data-reset-button>Reset</button>
+          </form>
+    </div>
+</body>
+</html>
