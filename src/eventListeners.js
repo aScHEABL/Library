@@ -3,10 +3,14 @@ import {
   popupCloseBtn_DOM,
   bookTitleInput_DOM,
   submitBtn_DOM,
-  resetBtn_DOM
+  resetBtn_DOM,
+  readOrNotSelect_DOM
 } from "./index.js";
 
 import { libraryArray, addBookToLibrary } from "./library.js";
+import addBooksToLocalStorage from "./localStorageFN.js";
+import clearRender from "./clearRender.js";
+import renderBooks from "./renderBooks.js";
 
 export default function eventListeners() {
   addBookBtn_DOM.addEventListener(`click`, () => {
@@ -22,7 +26,9 @@ export default function eventListeners() {
   submitBtn_DOM.addEventListener(`click`, () => {
     console.log(`Book ${bookTitleInput_DOM.value} has been added to library`);
     addBookToLibrary();
-    console.log(libraryArray);
+    addBooksToLocalStorage(libraryArray);
+    clearRender();
+    renderBooks();
   })
 
   resetBtn_DOM.addEventListener(`click`, () => {

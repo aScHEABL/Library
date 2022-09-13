@@ -1,6 +1,9 @@
 import "../style.css";
+import clearRender from "./clearRender";
 import eventListeners from "./eventListeners.js";
 import close_Icon from "./images/close-circle-outline.png";
+import renderBooks from "./renderBooks";
+import syncLibraryArray from "./syncLibraryArray";
 
 console.log(`Hello World!`);
 
@@ -16,10 +19,16 @@ export const readOrNotSelect_DOM = document.querySelector(`[data-select-read-or-
 export const submitBtn_DOM = document.querySelector(`[data-submit-button]`);
 export const resetBtn_DOM = document.querySelector(`[data-reset-button]`);
 
+// Webpage DOM
+
+export const main_DOM = document.querySelector(`#main`);
+
 // Image src
 
 popupCloseBtn_DOM.src = close_Icon;
 
 // Active functions
-
+syncLibraryArray();
+clearRender();
+renderBooks();
 eventListeners();
