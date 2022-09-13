@@ -21,7 +21,7 @@ class Book {
 export function addBookToLibrary() {
     let readValue = read.options[read.selectedIndex].value;
     // console.log(readValue);
-
+    console.log(libraryArray);
     libraryArray.push(
         new Book(title.value, author.value, page.value, language.value, readValue)
     );
