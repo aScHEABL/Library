@@ -25,7 +25,7 @@ export default function renderBooks () {
 
             removeBtn_DOM.addEventListener(`click`, () => {
                 libraryArrayFromLocalStorage.splice(index, 1);
-                // console.log(`book ${book[index].title} has been removed from the array`);
+                console.log(`book ${book.title} has been removed from the array`);
                 libraryArray = libraryArrayFromLocalStorage;
                 localStorage.setItem("libraryLocalStorage", JSON.stringify(libraryArrayFromLocalStorage));
                 clearRender();
