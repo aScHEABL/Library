@@ -29,6 +29,7 @@ export default function eventListeners() {
     addBooksToLocalStorage(libraryArray);
     clearRender();
     renderBooks();
+    document.querySelector(`[data-popup-window]`).style.display = `none`;
   })
 
   resetBtn_DOM.addEventListener(`click`, () => {
