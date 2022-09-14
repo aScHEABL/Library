@@ -27,6 +27,12 @@ export const main_DOM = document.querySelector(`#main`);
 
 popupCloseBtn_DOM.src = close_Icon;
 
+// Library Log
+
+export const logBookCount = document.querySelector(`[data-log-book-count]`);
+export const logBookReadCount = document.querySelector(`[data-log-read-count]`);
+export const logBookNotReadCount = document.querySelector(`[data-log-not-read-count]`);
+
 // Active functions
 syncLibraryArray();
 clearRender();
