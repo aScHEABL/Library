@@ -20,10 +20,11 @@ class Book {
 
 export function addBookToLibrary() {
     let readValue = read.options[read.selectedIndex].value;
+
     // Convert readValue from string to boolean
+
     readValue = (readValue === "true");
-    console.log(`readValue : ${readValue}`);
-    // console.log(libraryArray);
+    
     libraryArray.push(
         new Book(title.value, author.value, page.value, language.value, readValue)
     );
