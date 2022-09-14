@@ -8,7 +8,6 @@ import clearRender from "./clearRender.js";
 
 export default function renderBooks () {
     let libraryArrayFromLocalStorage = JSON.parse(localStorage.getItem("libraryLocalStorage"));
-    console.log(libraryArrayFromLocalStorage);
 
     if (libraryArrayFromLocalStorage == null) return
     else {
@@ -26,7 +25,7 @@ export default function renderBooks () {
 
             removeBtn_DOM.addEventListener(`click`, () => {
                 libraryArrayFromLocalStorage.splice(index, 1);
-                // console.log(`book ${index} has been removed from the array`);
+                // console.log(`book ${book[index].title} has been removed from the array`);
                 libraryArray = libraryArrayFromLocalStorage;
                 localStorage.setItem("libraryLocalStorage", JSON.stringify(libraryArrayFromLocalStorage));
                 clearRender();
