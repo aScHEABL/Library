@@ -6,7 +6,8 @@ import {
   resetBtn_DOM,
   readOrNotSelect_DOM
 } from "./index.js";
-
+import clearInputField from "./clearInputField.js";
+import formValidation from "./formValidation.js";
 import { libraryArray, addBookToLibrary } from "./library.js";
 import addBooksToLocalStorage from "./localStorageFN.js";
 import clearRender from "./clearRender.js";
@@ -25,11 +26,13 @@ export default function eventListeners() {
 
   submitBtn_DOM.addEventListener(`click`, () => {
     console.log(`Book ${bookTitleInput_DOM.value} has been added to library`);
+    // formValidation();
     addBookToLibrary();
     addBooksToLocalStorage(libraryArray);
     clearRender();
     renderBooks();
-    document.querySelector(`[data-popup-window]`).style.display = `none`;
+    clearInputField();
+    // document.querySelector(`[data-popup-window]`).style.display = `none`;
   })
 
   resetBtn_DOM.addEventListener(`click`, () => {

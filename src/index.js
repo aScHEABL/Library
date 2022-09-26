@@ -21,7 +21,7 @@ export const resetBtn_DOM = document.querySelector(`[data-reset-button]`);
 
 // Webpage DOM
 
-export const main_DOM = document.querySelector(`#main`);
+export const main_DOM = document.querySelector(`main`);
 
 // Image src
 
@@ -38,3 +38,5 @@ syncLibraryArray();
 clearRender();
 renderBooks();
 eventListeners();
+
+

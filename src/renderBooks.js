@@ -67,13 +67,12 @@ export default function renderBooks () {
             // Checkbox
             
             const toggleContainer_DOM = document.createElement(`div`);
-            const toggleP_DOM = document.createElement(`p`);
-            const switchLabel_DOM = document.createElement(`label`);
             const checkBox_DOM = document.createElement(`input`);
+            const toggleLabel_DOM = document.createElement(`label`);
             
             toggleContainer_DOM.classList.add(`toggle-container`);
-            toggleP_DOM.classList.add(`toggle-p`);
-            toggleP_DOM.textContent = `Mark as read`;
+            checkBox_DOM.classList.add(`toggle-checkbox`);
+            toggleLabel_DOM.classList.add(`toggle-label`);
             checkBox_DOM.type = `checkbox`;
             checkBox_DOM.checked = libraryArrayFromLocalStorage[index].readOrNot;
             
@@ -86,11 +85,10 @@ export default function renderBooks () {
                     console.log(`book ${libraryArray.title[index]} is not read!`);
                 };
             })
-            
-            const span_DOM = document.createElement(`span`);
-            
-            toggleContainer_DOM.append(toggleP_DOM, switchLabel_DOM);
-            switchLabel_DOM.append(checkBox_DOM, span_DOM);
+
+            toggleLabel_DOM.textContent = "Read";
+                        
+            toggleContainer_DOM.append(checkBox_DOM, toggleLabel_DOM);
             
             bookCard_DOM.append(removeBtn_DOM, bookCardTitle_DOM, bookCardAuthorLabel_DOM, bookCardAuthor_DOM, 
             bookCardPageLabel_DOM, bookCardPage_DOM, bookCardLanguageLabel_DOM, bookCardLanguage_DOM, toggleContainer_DOM);
