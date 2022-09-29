@@ -223,132 +223,107 @@ main > .book-card > .toggle-container > .toggle-label {
 }
 
 #pop-up {
-    background: rgba(0, 0, 0, 0.6);
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: none;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  #pop-up > form {
-    background-color: var(--dark-gray);
-    border-radius: 8px;
-    width: 480px;
-    height: 520px;
-    border: 1px solid white;
-    padding: 32px 64px 32px 64px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 16px;
-  }
-  
-  #pop-up > form > div {
-    position: relative;
-    bottom: 12%;
-    flex: 1 1 100%;
-    display: flex;
-    justify-content: center;
-  }
-  
-  #pop-up > form > div > h2 {
-    margin: 0;
-    color: var(--blue-gray-200);
-  }
-  
-  #pop-up > form > label {
-    position: relative;
-    bottom: 12%;
-    flex: 1 1 100%;
-    color: var(--blue-gray-200);
-  }
-  
-  #pop-up > form > input {
-    position: relative;
-    bottom: 12%;
-    flex: 1 1 100%;
-    color: var(--blue-gray-200);
-    border-radius: 4px;
-    border: solid 1px --blue-gray-200;
-  }
+  background: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
 
-  #pop-up > form > input[type="text"], input[type="number"] {
-    background-color: var(--dark-gray);
-  }
-  
-  #pop-up > form > input:valid {
-    border: solid 1px var(--chartreuse);
-  }
+#pop-up > form {
+  background-color: var(--dark-gray);
+  border-radius: 8px;
+  width: 480px;
+  height: 520px;
+  border: 1px solid var(--blue-gray-50);
+  padding: 16px 64px 16px 64px;
+}
 
-  #pop-up > form > input:invalid {
-    border: solid 1px var(--red);
-  }
+#popup-close {
+  filter: invert();
+  height: 36px;
+  width: 36px;
+  position: absolute;
+  left: 61.5%;
+  top: 24%;
+}
 
+.popup-title-container {
+  display: flex;
+  justify-content: center;
+  padding: 16px 16px 16px 16px;
+}
 
-  #pop-up > form > #select-read-or-not {
-    position: relative;
-    bottom: 12%;
-    flex: 1 1 100%;
-    appearance: none;
-    background-color: transparent;
-    border: none;
-    padding: 0 1rem 0 0;
-    margin: 0;
-    font-family: inherit;
-    font-size: inherit;
-    cursor: inherit;
-    line-height: inherit;
-    outline: none;
-    color: var(--blue-gray-200);
-    border: 1px solid var(--blue-gray-200);
-    border-radius: 4px;
-  }
+.popup-title-h2 {
+  font-size: 28px;
+  margin: 0;
+  color: var(--blue-gray-50);
+}
 
-  #pop-up > form > #select-read-or-not > option {
-    color: var(--blue-gray-200);
-    background-color: var(--dark-gray);
-    border: none;
-    outline: none;
-  }
+form label {
+  display: block;
+  color: var(--blue-gray-50);
+  padding: 16px 8px 2px 0px;
+}
 
-  #pop-up > form > button {
-    position: relative;
-    bottom: 12%;
-    background-color: var(--dark-gray);
-    color: var(--blue-gray-200);
-    border-radius: 6px;
-    cursor: pointer;
-  }
+form input {
+  border-radius: 4px;
+  outline: none;
+  border: none;
+  color: var(--blue-gray-50);
+  height: 5%;
+}
 
-  #pop-up > form > #submit-button {
-    flex: 1 1 60%;
-  }
-  
-  #pop-up > form > #clear-button {
-    flex: 1 1 30%;
-  }
+form .error-message {
+  height: 3%;
+  color: var(--camel);
+}
 
-  #popup-close {
-    position: relative;
-    top: -7%;
-    left: 107%;
-    height: 36px;
-    width: 36px;
-    border-radius: 50%;
-    filter: invert();
-    cursor: pointer;
-  }
+form input[type="text"], form input[type="number"] {
+  width: 100%;
+  background-color: var(--blue-gray-600);
+}
 
-  .remove-book-button {
-    border-radius: 50%;
-    filter: invert();
-    cursor: pointer;
-    position: relative;
-    top: -20%;
-    right: -98%;
-    width: 36px;
-    height: 36px;
-  }
+form select {
+  height: 5%;
+  appearance: none;
+  background-color: var(--blue-gray-600);
+  width: 100%;
+  outline: none;
+  border: none;
+  color: var(--blue-gray-50);
+  margin: 0px 0px 16px 0px;
+}
+
+.popup-button-container {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  height: 10%;
+}
+
+.popup-button-container button {
+  width: 50%;
+  height: 100%;
+  border-radius: 6px;
+  cursor: pointer;
+  background-color: var(--blue-gray-600);
+  color: var(--blue-gray-50);
+  font-size: 24px;
+  border: none;
+}
+
+.remove-book-button {
+  border-radius: 50%;
+  filter: invert();
+  cursor: pointer;
+  position: relative;
+  top: -20%;
+  right: -98%;
+  width: 36px;
+  height: 36px;
+}

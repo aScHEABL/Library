@@ -32,7 +32,6 @@ export default function eventListeners() {
     clearRender();
     renderBooks();
     clearInputField();
-    // document.querySelector(`[data-popup-window]`).style.display = `none`;
   })
 
   resetBtn_DOM.addEventListener(`click`, () => {
