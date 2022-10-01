@@ -3,8 +3,12 @@ import {
   popupCloseBtn_DOM,
   bookTitleInput_DOM,
   submitBtn_DOM,
-  resetBtn_DOM,
-  readOrNotSelect_DOM
+  resetBtn_DOM, 
+  errorMessageTitle, 
+  errorMessageAuthor, 
+  errorMessageLanguage, 
+  errorMessagePage, 
+  errorMessageRead
 } from "./index.js";
 import clearInputField from "./clearInputField.js";
 import formValidation from "./formValidation.js";
@@ -22,11 +26,16 @@ export default function eventListeners() {
   popupCloseBtn_DOM.addEventListener(`click`, () => {
     console.log(`Popup has been closed`);
     document.querySelector(`[data-popup-window]`).style.display = `none`;
+    errorMessageTitle.textContent = "";
+    errorMessageAuthor.textContent = "";
+    errorMessageLanguage.textContent = "";
+    errorMessagePage.textContent = "";
+    errorMessageRead.textContent = "";
   });
 
   submitBtn_DOM.addEventListener(`click`, () => {
     console.log(`Book ${bookTitleInput_DOM.value} has been added to library`);
-    // formValidation();
+    if (formValidation() === true) return;
     addBookToLibrary();
     addBooksToLocalStorage(libraryArray);
     clearRender();

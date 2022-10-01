@@ -8,7 +8,7 @@ import syncLibraryArray from "./syncLibraryArray";
 console.log(`Hello World!`);
 
 // Popup window variables
-
+export const form_DOM = document.querySelector(`[data-form]`);
 export const addBookBtn_DOM = document.querySelector(`[data-add-book-button]`);
 export const popupCloseBtn_DOM = document.querySelector(`[data-popup-close]`);
 export const bookTitleInput_DOM = document.querySelector(`[data-input-book-title]`);
@@ -18,6 +18,12 @@ export const bookLanguageInput_DOM = document.querySelector(`[data-input-book-la
 export const readOrNotSelect_DOM = document.querySelector(`[data-select-read-or-not]`);
 export const submitBtn_DOM = document.querySelector(`[data-submit-button]`);
 export const resetBtn_DOM = document.querySelector(`[data-reset-button]`);
+
+export const errorMessageTitle = document.querySelector(`[data-error-message-title]`);
+export const errorMessageAuthor = document.querySelector(`[data-error-message-author]`);
+export const errorMessagePage = document.querySelector(`[data-error-message-page]`);
+export const errorMessageLanguage = document.querySelector(`[data-error-message-language]`);
+export const errorMessageRead = document.querySelector(`[data-error-message-read]`);
 
 // Webpage DOM
 
@@ -38,5 +44,3 @@ syncLibraryArray();
 clearRender();
 renderBooks();
 eventListeners();
-
-

@@ -47,30 +47,30 @@
         </div> -->
     </main>
     <div id="pop-up" data-popup-window>
-        <form novalidate>
+        <form novalidate data-form>
             <div class="popup-title-container">
                 <h2 class="popup-title-h2">Add New Book</h2>
             </div>
             <img id="popup-close" data-popup-close>
             <label for="label-book-title">Book title</label>
             <input type="text" name="label-book-title" id="input-book-title" data-input-book-title>
-            <div class="error-message"></div>
+            <div class="error-message" data-error-message-title></div>
             <label for="label-book-author">Book author</label>
             <input type="text" name="label-book-author" id="input-book-author" data-input-book-author>
-            <div class="error-message"></div>
+            <div class="error-message" data-error-message-author></div>
             <label for="label-page-number">Number of pages</label>
             <input type="number" name="label-page-number" id="input-book-page" data-input-book-page>
-            <div class="error-message"></div>
+            <div class="error-message" data-error-message-page></div>
             <label for="label-language">Language</label>
             <input type="text" name="label-language" id="input-book-language" data-input-book-language>
-            <div class="input-control"></div>
+            <div class="error-message" data-error-message-language></div>
             <label for="label-read-or-not">Book status</label>
             <select name="label-read-or-not" id="select-read-or-not" data-select-read-or-not>
                 <option value="" selected disabled hidden>Did you read it?</option>
                 <option value="true">Yes</option>
                 <option value="false">No</option>
             </select>
-            <div class="error-message"></div>
+            <div class="error-message" data-error-message-read></div>
             <div class="popup-button-container">
                 <button type="submit" id="submit-button" data-submit-button>Add</button>
                 <button type="reset" id="reset-button" data-reset-button>Reset</button>

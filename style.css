@@ -238,7 +238,7 @@ main > .book-card > .toggle-container > .toggle-label {
   background-color: var(--dark-gray);
   border-radius: 8px;
   width: 480px;
-  height: 520px;
+  height: 580px;
   border: 1px solid var(--blue-gray-50);
   padding: 16px 64px 16px 64px;
 }
@@ -296,7 +296,6 @@ form select {
   outline: none;
   border: none;
   color: var(--blue-gray-50);
-  margin: 0px 0px 16px 0px;
 }
 
 .popup-button-container {
@@ -315,6 +314,7 @@ form select {
   color: var(--blue-gray-50);
   font-size: 24px;
   border: none;
+  margin: 16px 0px 0px 0px;
 }
 
 .remove-book-button {
