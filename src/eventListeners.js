@@ -45,5 +45,10 @@ export default function eventListeners() {
 
   resetBtn_DOM.addEventListener(`click`, () => {
     console.log(`Reset button has been clicked`);
+    errorMessageTitle.textContent = "";
+    errorMessageAuthor.textContent = "";
+    errorMessageLanguage.textContent = "";
+    errorMessagePage.textContent = "";
+    errorMessageRead.textContent = "";
   })
 }
