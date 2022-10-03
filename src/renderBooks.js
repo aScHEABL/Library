@@ -86,10 +86,24 @@ export default function renderBooks() {
       checkBox_DOM.addEventListener(`change`, () => {
         if (checkBox_DOM.checked === true) {
           libraryArrayFromLocalStorage[index].readOrNot = true;
-          console.log(`book ${libraryArray.title[index]} is read!`);
+          libraryArray = libraryArrayFromLocalStorage;
+          localStorage.setItem(
+            "libraryLocalStorage",
+            JSON.stringify(libraryArrayFromLocalStorage)
+          );
+          clearRender();
+          renderBooks();  
+          console.log(`book ${libraryArray[index].title} is read!`);
         } else if (checkBox_DOM.checked === false) {
           libraryArrayFromLocalStorage[index].readOrNot = false;
-          console.log(`book ${libraryArray.title[index]} is not read!`);
+          libraryArray = libraryArrayFromLocalStorage;
+          localStorage.setItem(
+            "libraryLocalStorage",
+            JSON.stringify(libraryArrayFromLocalStorage)
+          );
+          clearRender();
+          renderBooks();  
+          console.log(`book ${libraryArray[index].title} is not read!`);
         }
       });
 
