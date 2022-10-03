@@ -19,13 +19,14 @@ class Book {
 }
 
 export function addBookToLibrary() {
-    let readValue = read.options[read.selectedIndex].value;
+  let readValue = read.options[read.selectedIndex].value;
 
-    // Convert readValue from string to boolean
+  // Convert readValue from string to boolean
 
-    readValue = (readValue === "true");
-    
-    libraryArray.push(
-        new Book(title.value, author.value, page.value, language.value, readValue)
-    );
+  readValue = readValue === "true";
+
+  libraryArray.push(
+    new Book(title.value, author.value, page.value, language.value, readValue)
+  );
+  console.log(`Book ${title.value} has been added to library`);
 }
