@@ -3,7 +3,7 @@ import clearRender from "./clearRender";
 import eventListeners from "./eventListeners.js";
 import close_Icon from "./images/close-circle-outline.png";
 import renderBooks from "./renderBooks";
-import syncLibraryArray from "./syncLibraryArray";
+import {syncLibraryArray, syncLibraryLog} from "./syncLibraryArray";
 
 console.log(`Hello World!`);
 
@@ -55,9 +55,9 @@ popupCloseBtn_DOM.src = close_Icon;
 
 // Library Log
 
-export const logBookCount = document.querySelector(`[data-log-book-count]`);
-export const logBookReadCount = document.querySelector(`[data-log-read-count]`);
-export const logBookNotReadCount = document.querySelector(
+export const logBookCount_DOM = document.querySelector(`[data-log-book-count]`);
+export const logBookReadCount_DOM = document.querySelector(`[data-log-read-count]`);
+export const logBookNotReadCount_DOM = document.querySelector(
   `[data-log-not-read-count]`
 );
 
@@ -66,3 +66,4 @@ syncLibraryArray();
 clearRender();
 renderBooks();
 eventListeners();
+syncLibraryLog();

@@ -5,6 +5,7 @@ import close_Icon from "./images/close-circle-outline.png";
 import { libraryArray } from "./library.js";
 
 import clearRender from "./clearRender.js";
+import { syncLibraryLog } from "./syncLibraryArray.js";
 
 export default function renderBooks() {
   let libraryArrayFromLocalStorage = JSON.parse(
@@ -33,6 +34,7 @@ export default function renderBooks() {
         );
         clearRender();
         renderBooks();
+        syncLibraryLog();
       });
 
       main_DOM.append(bookCard_DOM);

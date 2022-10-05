@@ -3,7 +3,7 @@ import {
   bookAuthorInput_DOM as author,
   bookPageInput_DOM as page,
   bookLanguageInput_DOM as language,
-  readOrNotSelect_DOM as read,
+  readOrNotSelect_DOM as read
 } from "./index.js";
 
 export let libraryArray = [];

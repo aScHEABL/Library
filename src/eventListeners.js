@@ -20,6 +20,7 @@ import { libraryArray, addBookToLibrary } from "./library.js";
 import addBooksToLocalStorage from "./localStorageFN.js";
 import clearRender from "./clearRender.js";
 import renderBooks from "./renderBooks.js";
+import { syncLibraryLog } from "./syncLibraryArray.js";
 
 export default function eventListeners() {
   // Add book button to trigger popup
@@ -47,6 +48,7 @@ export default function eventListeners() {
     addBooksToLocalStorage(libraryArray);
     clearRender();
     renderBooks();
+    syncLibraryLog();
     clearInputField();
   });
 
